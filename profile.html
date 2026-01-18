@@ -176,6 +176,16 @@
 
 <!-- ACTION BUTTONS -->
 <div class="actions">
+  <style>.actions {
+  display: flex;             /* keep buttons side by side */
+  justify-content: center;   /* center them horizontally */
+  gap: 20px;                 /* space between buttons */
+  padding: 16px 0;           /* vertical spacing */
+  margin-top: 24px;          /* space from content above */
+}
+</style>
+
+
   <button class="btn no">✕</button>
   <script>
     document.querySelector('.no').addEventListener('click', () => {
@@ -190,6 +200,7 @@
     });
   </script>
 </div>
+
 
 
 
