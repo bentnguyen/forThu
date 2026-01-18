@@ -3,22 +3,17 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>My Profile
-  </title>
-
+  <title>Hinge-Style Profile</title>
   <style>
-  
-    * {
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    }
-
+    * { box-sizing: border-box; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; }
     body {
       margin: 0;
       background: #f7f7f7;
       display: flex;
       justify-content: center;
       padding: 24px;
+      flex-direction: column;
+      align-items: center;
     }
 
     .phone {
@@ -27,196 +22,162 @@
       border-radius: 24px;
       box-shadow: 0 10px 30px rgba(0,0,0,0.12);
       overflow: hidden;
+      padding: 16px;
+    }
+
+    .content {
+      margin-bottom: 24px;
     }
 
     .profile-img {
       width: 100%;
       height: 420px;
       object-fit: cover;
+      border-radius: 12px;
       display: block;
-    }
-
-    .content {
-      padding: 16px;
+      margin-bottom: 12px;
     }
 
     .name {
       font-size: 24px;
       font-weight: 700;
+      margin-bottom: 8px;
     }
 
-    .prompt {
-      margin-top: 16px;
+    .tabs {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
     }
 
-    .prompt h4 {
-      margin: 0 0 4px 0;
+    .tab {
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: #f1f1f1;
       font-size: 14px;
-      color: #6b6b6b;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
+      font-weight: 500;
+      color: #333;
+      cursor: pointer;
+      border: none;
+      white-space: nowrap;
+      transition: background 0.2s;
     }
 
-    .prompt p {
-      margin: 0;
-      font-size: 18px;
-    }
+    .tab:hover { background: #ddd; }
+    .tab.active { background: #ff4d6d; color: white; }
+
+    .prompt p:first-child { font-weight: bold; margin-bottom: 4px; }
+
+    .prompt { font-size: 16px; line-height: 1.5; }
 
     .actions {
       display: flex;
-      justify-content: space-around;
-      padding: 16px;
-      border-top: 1px solid #eee;
+      justify-content: center;
+      gap: 20px;
+      padding: 16px 0;
+      margin-top: 16px;
     }
 
     .btn {
-      width: 56px;
-      height: 56px;
+      width: 60px;
+      height: 60px;
       border-radius: 50%;
       border: none;
-      font-size: 22px;
+      font-size: 24px;
       cursor: pointer;
     }
 
-    .no { background: #f1f1f1; }
-    .like { background: #dff5ea; }
+    .btn.no { background: #f1f1f1; }
+    .btn.like { background: #dff5ea; }
   </style>
 </head>
-
 <body>
 
   <div class="phone">
 
     <!-- IMAGE 1 -->
-    <img class="profile-img" src="images/profilepic5.jpg" alt="Profile Image 1">
-
     <div class="content">
+      <img class="profile-img" src="images/profilepic5.jpg" alt="Profile Image 1">
       <div class="name">Benjamin Nguyen</div>
-      <div class="tags">
-  <span class="tag">23🎂</span>
-  <span class="tag">Libra♎</span>
-  <span class="tag">Liberal</span>
-  <style> .tags {
-  display: flex;
-  gap: 8px;
-  margin-top: 8px;
-}
+      <div class="tabs">
+        <button class="tab active">23 🎂</button>
+        <button class="tab">Libra ♎</button>
+        <button class="tab">Liberal</button>
+      </div>
+      <div class="prompt">
+        <p>Why I think we should date!</p>
+        <p>Everytime we talk I feel like we connect on a deep level, and I feel like I'm not afraid to open up to you about how I feel ♥️</p>
+      </div>
+    </div>
 
-.tag {
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: #f1f1f1;
-  font-size: 14px;
-  font-weight: 500;
-  color: #333;
-  white-space: nowrap;
-}
-</style>
-</div>
+    <!-- IMAGE 2 -->
+    <div class="content">
+      <img class="profile-img" src="images/profilepic8.jpg" alt="Profile Image 2">
+      <div class="prompt">
+        <p>Typical Date Night for Us</p>
+        <p>Going out to eat, cuddling and watching a movie, eating that kitty 😼</p>
+      </div>
+    </div>
 
+    <!-- IMAGE 3 -->
+    <div class="content">
+      <img class="profile-img" src="images/profilepic3.jpg" alt="Profile Image 3">
+      <div class="prompt">
+        <p>My Favorite Things about You!</p>
+        <p>1. The way that you smile and how you are always in a good mood, which makes me want to be around you</p>
+        <p>2. Talking to you never feels boring and I feel like I can be myself around you</p>
+        <p>3. Knowing that I won't be alone in this relationship, I will always have someone to depend on no matter what!</p>
+        <p>4. I knew from the moment I saw you that I was going to fall for you, and I was right :)</p>
+        <p>5. The way you fuck me.</p>
+      </div>
+    </div>
 
-<!-- IMAGE 1 -->
-<div class="content">
-  <div class="prompt">
-    <h4>Why I think we should date!</h4>
-    <p>Everytime we talk I feel like we connect on a deep level, and I feel like I'm not afraid to open up to you about how I feel♥️</p>
+    <!-- IMAGE 4 + AUDIO -->
+    <div class="content">
+      <img class="profile-img" src="images/profilepic7.jpg" alt="Profile Image 4">
+      <div class="prompt">
+        <p>This is for you &lt;3</p>
+        <audio controls style="width: 100%; margin-top: 8px;">
+          <source src="audio/finalpiece.m4a" type="audio/mp4">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+
+    <!-- IMAGE 5 -->
+    <div class="content">
+      <img class="profile-img" src="images/profilepic6.jpg" alt="Profile Image 5">
+      <div class="prompt">
+        <p>Why you should date me</p>
+        <p>1. I will always do my best to make you smile even if I'm not the best at it</p>
+        <p>2. I will never stop trying to be the best for you :)</p>
+        <p>3. I'm going to make you squirt on me.</p>
+      </div>
+    </div>
+
+    <!-- IMAGE 6 -->
+    <div class="content">
+      <img class="profile-img" src="images/profilepic.jpg" alt="Profile Image 6">
+    </div>
+
+    <!-- ACTION BUTTONS -->
+    <div class="actions">
+      <button class="btn no">✕</button>
+      <button class="btn like">❤</button>
+    </div>
+
   </div>
-</div>
 
-<!-- IMAGE 2 -->
-<div class="content">
-  <img class="profile-img" src="images/profilepic8.jpg" alt="Profile Image 2">
-  <div class="prompt">
-    <h4>Typical Date Night for Us</h4>
-    <p>Going out to eat, cuddling and watching a movie, eating that kitty😼</p>
-  </div>
-</div>
-
-<!-- IMAGE 3 -->
-<div class="content">
-  <img class="profile-img" src="images/profilepic3.jpg" alt="Profile Image 3">
-  <div class="prompt">
-    <h4>My Favorite Things about You!</h4>
-    <p>1. The way that you smile and how you are always in a good mood, which makes me want to be around you</p>
-    <p>2. Talking to you never feels boring and I feel like I can be myself around you</p>
-    <p>3. Knowing that I won't be alone in this relationship, I will always have someone to depend on no matter what!</p>
-    <p>4. I knew from the moment I saw you that I was going to fall for you, and I was right :)</p>
-    <p>5. The way you fuck me.</p>
-  </div>
-</div>
-
-<!-- IMAGE 4 + AUDIO -->
-<div class="content">
-  <img class="profile-img" src="images/profilepic7.jpg" alt="Profile Image 4">
-  <div class="prompt">
-    <h4>This is for you &lt;3</h4>
-    <audio controls style="width: 100%; margin-top: 8px;">
-      <source src="audio/finalpiece.m4a" type="audio/mp4">
-      Your browser does not support the audio element.
-    </audio>
-  </div>
-</div>
-
-<!-- IMAGE 5 -->
-<div class="content">
-  <img class="profile-img" src="images/profilepic6.jpg" alt="Profile Image 5">
-  <div class="prompt">
-    <h4>Why you should date me</h4>
-    <p>1. I will always do my best to make you smile even if I'm not the best at it</p>
-    <p>2. I will never stop trying to be the best for you :)</p>
-    <p>3. I'm going to make you squirt on me.</p>
-  </div>
-</div>
-
-<!-- IMAGE 6 -->
-<div class="content">
-  <img class="profile-img" src="images/profilepic.jpg" alt="Profile Image 6">
-</div>
-
-<!-- ACTION BUTTONS -->
-<div class="actions">
-  <style>.actions {
-  display: flex;             /* keep buttons side by side */
-  justify-content: center;   /* center them horizontally */
-  gap: 20px;                 /* space between buttons */
-  padding: 16px 0;           /* vertical spacing */
-  margin-top: 24px;          /* space from content above */
-}
-</style>
-
-
-  <button class="btn no">✕</button>
   <script>
     document.querySelector('.no').addEventListener('click', () => {
       window.location.href = 'nolikes.html';
     });
-  </script>
 
-  <button class="btn like">❤</button>
-  <script>
     document.querySelector('.like').addEventListener('click', () => {
       window.location.href = 'lookup.html';
     });
   </script>
-</div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</body>
+</html>
