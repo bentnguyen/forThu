@@ -151,25 +151,15 @@
   <div class="prompt">
   <h4>This is for you &lt;3</h4>
 
-  <button onclick="playAudio()" class="play-btn">
-    ▶ Play Voice Message
-  </button>
+  <div class="prompt">
+  <h4>This is for you &lt;3</h4>
 
-  <audio id="voiceMessage">
-  <source src="audio/finalpiece.m4a" type="audio/mp4">
-  Your browser does not support audio.
-</audio>
+  <audio controls style="width: 100%; margin-top: 8px;">
+    <source src="audio/finalpiece.m4a" type="audio/mp4">
+    Your browser does not support the audio element.
+  </audio>
+</div>
 
-<button class="play-btn" onclick="playAudio()">
-  ▶ Play Voice Message
-</button>
-
-<script>
-  function playAudio() {
-    const audio = document.getElementById("voiceMessage");
-    audio.play();
-  }
-</script>
 
 
 
@@ -199,6 +189,7 @@
 </script>
     </div>
     <d
+
 
 
 
